@@ -1,0 +1,385 @@
+@import 'tailwindcss';
+
+/* COMIC SANS BABY */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Bangers&family=Permanent+Marker&display=swap');
+
+:root {
+  --bg: 9 14 17;
+  --neon-pink: #ff00ff;
+  --neon-green: #00ff00;
+  --neon-blue: #00ffff;
+  --neon-yellow: #ffff00;
+  --neon-orange: #ff6600;
+  
+  /* PTSD colors */
+  --ptsd-p: #2196F3;
+  --ptsd-t: #FFEB3B;
+  --ptsd-s: #F44336;
+  --ptsd-d: #4CAF50;
+}
+
+html {
+  color-scheme: dark;
+  cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><text y='28' font-size='28'>🐧</text></svg>"), auto;
+}
+
+body {
+  margin: 0;
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+  background: #0a0e12;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   RAINBOW TEXT ANIMATION
+======================================== */
+@keyframes rainbow {
+  0% { color: #ff0000; }
+  14% { color: #ff7f00; }
+  28% { color: #ffff00; }
+  42% { color: #00ff00; }
+  57% { color: #0000ff; }
+  71% { color: #4b0082; }
+  85% { color: #9400d3; }
+  100% { color: #ff0000; }
+}
+
+.rainbow-text {
+  animation: rainbow 2s linear infinite;
+}
+
+/* ========================================
+   PTSD LOGO - EXTRA CHUNKY
+======================================== */
+.ptsd-logo {
+  font-family: 'Bangers', 'Impact', sans-serif;
+  display: flex;
+  gap: 0.02em;
+  filter: drop-shadow(0 0 20px rgba(255,255,255,0.5));
+}
+
+.ptsd-logo span {
+  display: inline-block;
+  -webkit-text-stroke: 4px #000;
+  text-shadow: 
+    4px 4px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 0 30px currentColor;
+  animation: letterBounce 0.5s ease-in-out infinite;
+}
+
+.ptsd-logo span:nth-child(1) { animation-delay: 0s; }
+.ptsd-logo span:nth-child(2) { animation-delay: 0.1s; }
+.ptsd-logo span:nth-child(3) { animation-delay: 0.2s; }
+.ptsd-logo span:nth-child(4) { animation-delay: 0.3s; }
+
+.ptsd-logo .p { color: var(--ptsd-p); }
+.ptsd-logo .t { color: var(--ptsd-t); }
+.ptsd-logo .s { color: var(--ptsd-s); }
+.ptsd-logo .d { color: var(--ptsd-d); }
+
+@keyframes letterBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* ========================================
+   GLITCH EFFECT
+======================================== */
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-3px, 3px); }
+  40% { transform: translate(-3px, -3px); }
+  60% { transform: translate(3px, 3px); }
+  80% { transform: translate(3px, -3px); }
+  100% { transform: translate(0); }
+}
+
+.glitch {
+  animation: glitch 0.3s infinite;
+}
+
+.glitch-hover:hover {
+  animation: glitch 0.1s infinite;
+}
+
+/* ========================================
+   SPIN ANIMATIONS
+======================================== */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: spin 3s linear infinite;
+}
+
+.spin-slow {
+  animation: spinSlow 10s linear infinite;
+}
+
+.spin-hover:hover {
+  animation: spin 0.5s linear infinite;
+}
+
+/* ========================================
+   SHAKE ANIMATIONS
+======================================== */
+@keyframes shake {
+  0%, 100% { transform: translateX(0) rotate(0); }
+  10% { transform: translateX(-5px) rotate(-5deg); }
+  20% { transform: translateX(5px) rotate(5deg); }
+  30% { transform: translateX(-5px) rotate(-5deg); }
+  40% { transform: translateX(5px) rotate(5deg); }
+  50% { transform: translateX(-5px) rotate(-5deg); }
+  60% { transform: translateX(5px) rotate(5deg); }
+  70% { transform: translateX(-5px) rotate(-5deg); }
+  80% { transform: translateX(5px) rotate(5deg); }
+  90% { transform: translateX(-5px) rotate(-5deg); }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+.shake-hover:hover {
+  animation: shake 0.3s ease-in-out infinite;
+}
+
+/* ========================================
+   BOUNCE ANIMATION
+======================================== */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.1); }
+}
+
+.bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+/* ========================================
+   PULSE GLOW
+======================================== */
+@keyframes pulseGlow {
+  0%, 100% { 
+    box-shadow: 0 0 20px var(--neon-pink), 0 0 40px var(--neon-blue);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 40px var(--neon-green), 0 0 80px var(--neon-yellow);
+    transform: scale(1.05);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 1.5s ease-in-out infinite;
+}
+
+/* ========================================
+   MARQUEE
+======================================== */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee {
+  animation: marquee 15s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-fast {
+  animation: marquee 8s linear infinite;
+}
+
+/* ========================================
+   FLOATING CHAOS
+======================================== */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  25% { transform: translateY(-15px) rotate(10deg) scale(1.1); }
+  50% { transform: translateY(0) rotate(0deg) scale(1); }
+  75% { transform: translateY(-10px) rotate(-10deg) scale(1.05); }
+}
+
+@keyframes floatCrazy {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  20% { transform: translateY(-25px) rotate(15deg) scale(1.2); }
+  40% { transform: translateY(10px) rotate(-10deg) scale(0.9); }
+  60% { transform: translateY(-15px) rotate(5deg) scale(1.1); }
+  80% { transform: translateY(5px) rotate(-15deg) scale(1); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-crazy {
+  animation: floatCrazy 2s ease-in-out infinite;
+}
+
+/* ========================================
+   NEON BUTTONS
+======================================== */
+.neon-btn {
+  position: relative;
+  padding: 15px 30px;
+  font-family: 'Bangers', cursive;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+  background-size: 200% 200%;
+  border: 4px solid #fff;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 0 0 10px currentColor;
+  box-shadow: 
+    0 0 10px #ff00ff,
+    0 0 20px #00ffff,
+    inset 0 0 20px rgba(255,255,255,0.2);
+  animation: neonPulse 1s ease-in-out infinite alternate;
+  transition: all 0.2s;
+}
+
+.neon-btn:hover {
+  transform: scale(1.1) rotate(-2deg);
+  animation: shake 0.2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0% { 
+    background-position: 0% 50%;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+  }
+  100% { 
+    background-position: 100% 50%;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+  }
+}
+
+/* ========================================
+   RETRO BORDER
+======================================== */
+.retro-border {
+  border: 5px dashed var(--neon-yellow);
+  box-shadow: 
+    inset 0 0 20px rgba(255,255,0,0.3),
+    0 0 20px rgba(255,255,0,0.5);
+}
+
+/* ========================================
+   PENGUIN ANIMATION
+======================================== */
+@keyframes penguinVibes {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% { 
+    transform: translateY(-15px) rotate(-3deg) scale(1.02);
+  }
+  50% { 
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  75% { 
+    transform: translateY(-10px) rotate(3deg) scale(1.02);
+  }
+}
+
+.penguin-vibes {
+  animation: penguinVibes 2s ease-in-out infinite;
+}
+
+/* ========================================
+   BACKGROUND CHAOS
+======================================== */
+@keyframes bgMove {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+.chaos-bg {
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255,0,255,0.03) 10px,
+      rgba(255,0,255,0.03) 20px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(0,255,255,0.03) 10px,
+      rgba(0,255,255,0.03) 20px
+    );
+  animation: bgMove 20s linear infinite;
+}
+
+/* ========================================
+   FIRE EMOJI TRAIL
+======================================== */
+@keyframes fireTrail {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-50px) scale(0); }
+}
+
+/* ========================================
+   BLINK
+======================================== */
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ========================================
+   STROBE (careful with this one lol)
+======================================== */
+@keyframes strobe {
+  0%, 100% { background-color: transparent; }
+  50% { background-color: rgba(255,255,255,0.1); }
+}
+
+.strobe-subtle {
+  animation: strobe 0.5s ease-in-out infinite;
+}
+
+/* ========================================
+   FADE IN ANIMATION
+======================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* ========================================
+   RADIAL GRADIENT BACKGROUND
+======================================== */
+.bg-gradient-radial {
+  background: radial-gradient(circle at center, var(--tw-gradient-stops));
+}
