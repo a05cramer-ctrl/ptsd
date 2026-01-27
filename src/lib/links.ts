@@ -1,5 +1,5 @@
 export const LINKS = {
-  twitter: '#', // Add your Twitter/X link here
-  buy: '#', // Add your buy link (Raydium, Jupiter, etc)
-  ca: 'TBA', // Contract address
+  twitter: 'https://x.com/PTSD_DEV',
+  buy: 'https://pump.fun/coin/GSAwNjFZp5d2MVoDRkUCec6SdBa42iFvTQbcVwFbpump',
+  ca: 'GSAwNjFZp5d2MVoDRkUCec6SdBa42iFvTQbcVwFbpump',
 } as const

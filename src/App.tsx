@@ -141,10 +141,15 @@ function EnterScreen({ onEnter }: { onEnter: () => void }) {
         </p>
         
         {/* Social hint */}
-        <div className="mt-6 flex items-center gap-4 text-white/50">
-          <TwitterIcon className="w-6 h-6 hover:text-white transition" />
-          <span className="text-sm">@PTSD on Solana</span>
-        </div>
+        <a 
+          href={LINKS.twitter}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-6 flex items-center gap-4 text-white/50 hover:text-white transition"
+        >
+          <TwitterIcon className="w-6 h-6" />
+          <span className="text-sm">@PTSD_DEV</span>
+        </a>
       </div>
     </div>
   )
