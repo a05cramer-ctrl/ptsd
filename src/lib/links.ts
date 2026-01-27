@@ -1,5 +1,5 @@
 export const LINKS = {
   twitter: 'https://x.com/PTSD_DEV',
-  buy: 'https://pump.fun/coin/GSAwNjFZp5d2MVoDRkUCec6SdBa42iFvTQbcVwFbpump',
-  ca: 'GSAwNjFZp5d2MVoDRkUCec6SdBa42iFvTQbcVwFbpump',
+  buy: 'https://letsbonk.io/token/76Hm4ps4ag4x9jEarTXEDd5J7Vcziq1UMu2QGsK4bonk',
+  ca: '76Hm4ps4ag4x9jEarTXEDd5J7Vcziq1UMu2QGsK4bonk',
 } as const
